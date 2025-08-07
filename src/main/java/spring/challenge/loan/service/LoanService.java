@@ -1,7 +1,6 @@
 package spring.challenge.loan.service;
 
 import org.springframework.stereotype.Service;
-import spring.challenge.loan.domain.Loan;
 import spring.challenge.loan.domain.LoanType;
 import spring.challenge.loan.domain.Location;
 import spring.challenge.loan.dto.CustomerLoanRequest;

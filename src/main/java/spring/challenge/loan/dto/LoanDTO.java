@@ -1,7 +1,6 @@
 package spring.challenge.loan.dto;
 
 import spring.challenge.loan.domain.Loan;
-import spring.challenge.loan.domain.LoanType;
 
 public record LoanDTO(
         String typeName,
