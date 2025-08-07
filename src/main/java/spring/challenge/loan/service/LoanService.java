@@ -6,6 +6,7 @@ import spring.challenge.loan.domain.Location;
 import spring.challenge.loan.dto.CustomerLoanRequest;
 import spring.challenge.loan.dto.CustomerLoanResponse;
 import spring.challenge.loan.dto.LoanDTO;
+import spring.challenge.loan.exceptions.LoanNotAvailableException;
 import spring.challenge.loan.utils.LoanRulesUtils;
 
 import java.util.ArrayList;
@@ -27,6 +28,10 @@ public class LoanService {
 
         if(isConsigmentLoanAvailable(customerData)){
             loans.add(new LoanDTO(LoanType.CONSIGMENT.name(), LoanType.CONSIGMENT.getInterestRate()));
+        }
+
+        if(loans.isEmpty()){
+            throw new LoanNotAvailableException("Nenhum empréstimo disponível para esse cliente.");
         }
 
         return new CustomerLoanResponse(customerData.name(), loans);

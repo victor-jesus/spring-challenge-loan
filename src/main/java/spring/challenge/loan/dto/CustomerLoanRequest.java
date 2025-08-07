@@ -8,16 +8,16 @@ import spring.challenge.loan.domain.Location;
 import java.math.BigDecimal;
 
 public record CustomerLoanRequest(
-        @NotNull
+        @NotNull(message = "Idade não pode ser nulo")
         Integer age,
-        @CPF
+        @CPF(message = "CPF precisa ser vlidoi")
         @NotBlank
         String cpf,
-        @NotBlank
+        @NotBlank(message = "Nome não pode estar vazio")
         String name,
-        @NotNull
+        @NotNull(message = "Salário não pode estar vazio")
         BigDecimal income,
-        @NotNull
+        @NotNull(message = "Localização não pode estar vazia")
         Location location
 ) {
 
