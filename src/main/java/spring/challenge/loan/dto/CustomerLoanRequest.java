@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 public record CustomerLoanRequest(
         @NotNull(message = "Idade não pode ser nulo")
         Integer age,
-        @CPF(message = "CPF precisa ser vlidoi")
+        @CPF(message = "CPF precisa ser válido")
         @NotBlank
         String cpf,
         @NotBlank(message = "Nome não pode estar vazio")

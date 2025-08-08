@@ -15,8 +15,11 @@ import spring.challenge.loan.service.LoanService;
 @RequestMapping("/customer-loans")
 public class LoanController {
 
-    @Autowired
-    private LoanService loanService;
+    private final LoanService loanService;
+
+    public LoanController(LoanService loanService) {
+        this.loanService = loanService;
+    }
 
     @PostMapping
     public ResponseEntity<CustomerLoanResponse> customerLoanRequest(@RequestBody @Valid CustomerLoanRequest request){
