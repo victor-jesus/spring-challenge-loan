@@ -17,6 +17,7 @@ Todo o desafio foi feito de acordo com [repositório do Backend Brasil](https://
 
 - Java 17
 - Spring Boot
+- Spring Docs
 - JUnit 5 (testes unitários)
 - Postman
 - Maven
@@ -119,7 +120,10 @@ java -jar target/loan-0.0.1-SNAPSHOT.jar
 ```
 
 A API está localizada na porta 8080
-Acesse: [http://localhost:8080](http://localhost:8080)
+- Acesse: [http://localhost:8080](http://localhost:8080)
+
+Documentação da API:
+- Acesse: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 ---
 
